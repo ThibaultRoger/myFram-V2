@@ -1,0 +1,26 @@
+{
+    "name": "vendor/myframv2",
+    "description": "php framework based on php 5 and MVC architecture",
+    "license": "GPL 3",
+    "authors": [
+        {
+            "name": "ThibaultRoger",
+            "email": "thibaultroger1@gmail.com"
+        }
+    ],
+
+    "autoload": {
+    "psr-4" : {
+     "Lib\\": "../Lib/",
+     "App\\": "../App/"
+       }
+   },
+   
+    "scripts": {
+        "post-install-cmd": [
+            "mv vendor ./Lib",
+            "rm -rf vendor"
+        ]
+ 
+    }
+}
