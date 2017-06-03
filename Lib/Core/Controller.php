@@ -1,6 +1,6 @@
 <?php
 
-namespace Lib^\Core;
+namespace Lib\Core;
 use Lib\Core\Form
 
 abstract class Controller {
