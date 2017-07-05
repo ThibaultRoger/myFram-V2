@@ -1,0 +1,117 @@
+<?php 
+namespace App\Modules\CRUD\Controllers;
+use Lib\Core\Controller;
+use App\Modules\CRUD\Models\CRUD;
+
+  
+  class CRUDController extends Controller {
+    
+  
+   
+  public function index(){
+   
+       $appel = new CRUD();
+       $result= $appel->findAll();
+        $result = $appel->exec($result);
+	   $this->variable('results', $result); 
+	   $this->render('index', 'CRUD','crud');
+
+	}
+	
+	
+
+	
+	public function show(){
+
+
+		$appel = new CRUD();
+	$result = $appel->findById($_GET['id']);
+	 $result = $appel->exec($result);
+         $result = current($result);
+	 $this->variable('result', $result);
+		  $this->render('show','CRUD','crud');
+
+	}
+	
+	
+
+
+
+	public function edit(){
+		
+	 if(isset($this->request['id'])){
+				
+					$save = new CRUD();
+				$save->save($this->request);
+				//$this->Session->setFlash('l\'enregistre a été effectué'); 
+			}
+	 
+	 
+	 $appel = new CRUD();
+	$result = $appel->findbyid($_GET['id']);
+	$result = $appel->exec($result);
+    $result = current($result);
+	$this->variable('value', $result);
+	$this->variable('id', $_GET['id']); 
+	$this->render('edit', 'CRUD', 'crud');
+	 /*$appel = new CRUD();
+	 $result = $appel->edit($this->request);
+	 $result = $appel->exec($result);
+	 $this->redirection('CRUD');*/
+	}
+
+
+
+ public function insert() {
+	 
+	 
+				
+				
+			if (!empty($_POST) ) {
+
+					$save = new Ouvrages();
+				$save->insert($_POST);
+
+                 $this->redirection('CRUD/'.$save->LastInsert());
+				}
+			
+	 
+
+	
+	$this->render('insert', 'CRUD', 'crud');
+	
+	 
+	
+}
+	 
+	 
+
+
+
+
+public function delete() {
+	 
+	 $appel = new CRUD();
+	 $result = $appel->delete($_GET['id']);
+
+	 $this->redirection('CRUD');
+	
+  }
+
+
+
+  }
+?>
+
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    

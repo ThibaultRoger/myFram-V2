@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+  <route url="/" module="Home" controller="Home" action="index" />
+ <route url="/test/([0-9]+)" module="Home" controller="Home" action="index" vars="testget" />
+   <route url="/crud" module="Crud" controller="Crud" action="index" />
+   <route url="/crud/generate" module="Crud" controller="Crud" action="generate" />
+
+</routes>

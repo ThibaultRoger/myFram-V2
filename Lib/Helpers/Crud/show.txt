@@ -1,0 +1,22 @@
+
+
+    <div class="container">
+     
+                <div class="span10 offset1">
+                    <div class="row">
+<div class="form-actions">
+                          <a class="btn" href="<?php echo $this->uri.'/CRUD'; ?>" >Back</a>
+                       </div>
+                        <h3>Read a Customer</h3>
+                    </div>
+                     
+                    <div class="form-horizontal" >
+                      CRUDSHOW
+                      </div>
+                        
+                     
+                      
+                    </div>
+                </div>
+                 
+    </div> <!-- /container -->

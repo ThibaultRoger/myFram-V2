@@ -1,0 +1,13 @@
+<?php
+namespace App\Modules\CRUD\Models;
+
+use Lib\Core\Model;
+
+use PDO;
+  class CRUD extends Model {
+  
+public $tablename = 'crudtable';
+
+
+}
+?>

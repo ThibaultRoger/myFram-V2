@@ -1,0 +1,36 @@
+
+    <div class="container">
+    		<div class="row">
+    			<h3>INDEX</h3>
+    		</div>
+			<div class="row">
+				<p>
+					<a href="<?php echo $this->uri.'/CRUD/insert'; ?>" class="btn btn-success">Créer</a>
+				</p>
+				
+				<table class="table table-striped table-bordered">
+		              <thead>
+		                <tr>
+		                  COLUMN-NAME
+		                </tr>
+		              </thead>
+		              <tbody>
+		              <?php 
+	 				   foreach ($results as $v) {
+						   		echo '<tr>';
+							   	COLUMN-VALUE
+							   	echo '<td width=250>';
+							   	echo '<a class="btn" href="'.$this->uri.'/CRUD/'.$v->id.'">Read</a>';
+							   	echo '&nbsp;';
+							   	echo '<a class="btn btn-success" href="'.$this->uri.'/CRUD/edit/'.$v->id.'">Update</a>';
+							   	echo '&nbsp;';
+							   	echo '<a class="btn btn-danger" href="'.$this->uri.'/CRUD/delete/'.$v->id.'">Delete</a>';
+							   	echo '</td>';
+							   	echo '</tr>';
+					   }
+					   
+					  ?>
+				      </tbody>
+	            </table>
+    	</div>
+    </div> 

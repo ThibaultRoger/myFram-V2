@@ -8,19 +8,17 @@
             "email": "thibaultroger1@gmail.com"
         }
     ],
+   "require": {
 
+         "twbs/bootstrap": "3.2.*"
+
+    },
+    
+    
     "autoload": {
     "psr-4" : {
      "Lib\\": "../Lib/",
      "App\\": "../App/"
        }
-   },
-   
-    "scripts": {
-        "post-install-cmd": [
-            "mv vendor ./Lib",
-            "rm -rf vendor"
-        ]
- 
-    }
+   }
 }
