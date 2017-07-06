@@ -23,14 +23,14 @@ if (defined('ENVIRONMENT')) {
             error_reporting(E_ALL);
 
             ini_set('log_errors', 'On');
-              ini_set('error_log', 'logs/errors.log');
+              ini_set('error_log', 'log/errors.log');
             
             break;
         case 'production':
             error_reporting(E_All);
            ini_set("display_errors","Off");
            ini_set('log_errors', 'On');
-           ini_set('error_log', 'logs/errors.log');
+           ini_set('error_log', 'log/errors.log');
             break;
         default:
             exit('L environnement de travail n \'est pas défini.');
