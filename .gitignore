@@ -1,5 +1,5 @@
 Config/db.xml
 Lib/vendor
 Lib/composer.lock
-Cache/cache.tx
-log/errors.log
+Cache
+log
