@@ -1,10 +1,9 @@
 <?php
 namespace Lib\Core;
-use Lib\Core\Form;
+use Lib\Helpers\Form;
 use Lib\Core\MyExceptions;
 
 abstract class Controller{
-
 
     private $vars     = array();
     private $rendered = false;

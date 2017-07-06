@@ -1,5 +1,5 @@
 <?php
-namespace Lib\Core;
+namespace Lib\Helpers;
 
 class Form{
 	
