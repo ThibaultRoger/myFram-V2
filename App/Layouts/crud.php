@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
     <title>CRUD GENERATOR</title>
         <link rel="stylesheet" href="<?php echo $this->uri.'/Lib/vendor/twbs/bootstrap/dist/css/bootstrap.css'; ?>">
-    <script src="<?php echo $this->uri.'/Lib/vendor/twbs/boostrap/css/bootstrap.css'; ?>"></script>
+   
     
     </head> 
     <body>       
